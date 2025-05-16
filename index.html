@@ -12,22 +12,25 @@
       background-size: cover;
       color: #fff;
       text-align: center;
-      padding: 30px 15px;
-      backdrop-filter: brightness(0.3) blur(3px);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .container {
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 12px;
-      padding: 25px;
-      max-width: 408px;
-      margin: auto;
-      box-shadow: 0 0 20px #ff0055;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      padding: 30px 20px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 25px #ff0055;
     }
 
     .profile-img {
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #ff0055;
@@ -37,21 +40,21 @@
     h1 {
       font-size: 22px;
       color: #ff0055;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .btn {
       display: block;
       width: 100%;
-      margin: 10px auto;
-      padding: 14px;
+      margin: 10px 0;
+      padding: 12px;
       border: none;
       border-radius: 8px;
       background-color: #ff0055;
       color: #fff;
       font-size: 16px;
       text-decoration: none;
-      transition: 0.3s;
+      transition: background 0.3s;
     }
 
     .btn:hover {
@@ -59,16 +62,15 @@
     }
 
     .footer {
-      margin-top: 40px;
+      margin-top: 30px;
       font-size: 12px;
-      color: #666;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://i.imgur.com/WtkLCen.jpeg" alt="xans puta do fakzts" />
-
+    <img src="https://i.imgur.com/WtkLCen.jpeg" class="profile-img" alt="xans puta do fakzts" />
     <h1>xans mia puta</h1>
 
     <a href="https://t.me/SEUCANAL" class="btn">Canal de Prévias</a>
