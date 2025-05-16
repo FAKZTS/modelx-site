@@ -10,8 +10,8 @@
       padding: 0;
       font-family: Arial, sans-serif;
       color: #fff;
-      overflow: hidden;
       height: 100vh;
+      overflow: hidden;
     }
 
     #particles-js {
@@ -20,22 +20,22 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url("https://i.imgur.com/IP9LhQJ.jpeg") no-repeat center center fixed;
+      background: url("https://i.imgur.com/Df9PjFl.jpg") no-repeat center center fixed;
       background-size: cover;
       z-index: -2;
     }
 
     .container {
-      position: relative;
-      z-index: 1;
-      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.75);
       backdrop-filter: blur(6px);
       border-radius: 16px;
       max-width: 400px;
-      margin: auto;
+      width: 90%;
       padding: 30px 20px;
-      top: 50%;
-      transform: translateY(-50%);
       box-shadow: 0 0 25px #ff0055;
       text-align: center;
     }
@@ -56,9 +56,9 @@
     }
 
     .btn {
-      display: block;
-      width: 100%;
-      margin: 10px 0;
+      display: inline-block;
+      width: 85%;
+      margin: 10px auto;
       padding: 14px;
       border: none;
       border-radius: 8px;
@@ -83,15 +83,9 @@
     }
 
     @keyframes pulse {
-      0% {
-        box-shadow: 0 0 10px #ff0055;
-      }
-      50% {
-        box-shadow: 0 0 25px #ff0055;
-      }
-      100% {
-        box-shadow: 0 0 10px #ff0055;
-      }
+      0% { box-shadow: 0 0 10px #ff0055; }
+      50% { box-shadow: 0 0 25px #ff0055; }
+      100% { box-shadow: 0 0 10px #ff0055; }
     }
   </style>
 </head>
@@ -111,12 +105,12 @@
     <div class="footer">Conteúdo adulto. +18 © 2025</div>
   </div>
 
-  <!-- Script de partículas -->
+  <!-- Partículas animadas -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     particlesJS("particles-js", {
       particles: {
-        number: { value: 40 },
+        number: { value: 50 },
         color: { value: "#ff0055" },
         shape: { type: "circle" },
         opacity: {
@@ -129,7 +123,7 @@
         },
         line_linked: {
           enable: true,
-          distance: 100,
+          distance: 120,
           color: "#ff0055",
           opacity: 0.3,
           width: 1
