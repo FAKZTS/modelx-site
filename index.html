@@ -130,6 +130,25 @@
           onhover: {
             enable: true,
             mode: "repulse"
+
+            #particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff0055, #5500ff);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  z-index: -2;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
           }
         }
       },
