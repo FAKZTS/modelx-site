@@ -5,27 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>xansputadofak - Conteúdo Exclusivo</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
+      color: #fff;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: url("https://i.imgur.com/IP9LhQJ.jpeg") no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      z-index: -2;
     }
 
     .container {
+      position: relative;
+      z-index: 1;
       background-color: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(5px);
-      padding: 30px 20px;
+      backdrop-filter: blur(6px);
       border-radius: 16px;
-      width: 90%;
       max-width: 400px;
+      margin: auto;
+      padding: 30px 20px;
+      top: 50%;
+      transform: translateY(-50%);
       box-shadow: 0 0 25px #ff0055;
+      text-align: center;
     }
 
     .profile-img {
@@ -47,28 +59,45 @@
       display: block;
       width: 100%;
       margin: 10px 0;
-      padding: 12px;
+      padding: 14px;
       border: none;
       border-radius: 8px;
       background-color: #ff0055;
       color: #fff;
       font-size: 16px;
       text-decoration: none;
-      transition: background 0.3s;
+      box-shadow: 0 0 15px #ff0055;
+      transition: 0.3s;
+      animation: pulse 2s infinite;
     }
 
     .btn:hover {
       background-color: #e6004c;
+      box-shadow: 0 0 25px #ff0055;
     }
 
     .footer {
-      margin-top: 30px;
+      margin-top: 25px;
       font-size: 12px;
       color: #aaa;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 10px #ff0055;
+      }
+      50% {
+        box-shadow: 0 0 25px #ff0055;
+      }
+      100% {
+        box-shadow: 0 0 10px #ff0055;
+      }
     }
   </style>
 </head>
 <body>
+  <div id="particles-js"></div>
+
   <div class="container">
     <img src="https://i.imgur.com/WtkLCen.jpeg" class="profile-img" alt="xans puta do fakzts" />
     <h1>xans mia puta</h1>
@@ -81,5 +110,46 @@
 
     <div class="footer">Conteúdo adulto. +18 © 2025</div>
   </div>
+
+  <!-- Script de partículas -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 40 },
+        color: { value: "#ff0055" },
+        shape: { type: "circle" },
+        opacity: {
+          value: 0.4,
+          random: true
+        },
+        size: {
+          value: 3,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 100,
+          color: "#ff0055",
+          opacity: 0.3,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse"
+          }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
 </body>
 </html>
